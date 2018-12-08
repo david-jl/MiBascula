@@ -1,0 +1,19 @@
+.navbar {
+    padding-top: 64px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding-top: 24px;
+    }
+
+    .toolbar {
+        padding: 0 !important;
+    }
+}
+
+@media (orientation: landscape) {
+    .appbar {
+        height: 56px;
+    }
+}

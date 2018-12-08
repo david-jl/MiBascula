@@ -1,0 +1,153 @@
+.grafica-ordenador {
+    height: 100vh !important;
+}
+
+.grafica-movil {
+    min-height: 90vh !important;
+    margin-bottom: 10% !important;
+}
+
+@media (orientation: landscape) {
+    .grafica-movil {
+        min-height: 500px !important;
+        margin-bottom: 10% !important;
+    }
+}
+
+.mes {
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.mes-texto {
+    margin: 0;
+    font-size: 25px;
+    align-self: center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mes-izq {
+    animation: mes-izquierda 1s ease 1 forwards;
+}
+
+.mes-der {
+    animation: mes-derecha 1s ease 1 forwards;
+}
+
+@keyframes mes-izquierda {
+    0% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(-50%);
+        opacity: 0
+    }
+    51% {
+        transform: translateX(50%);
+        opacity: 0
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes mes-derecha {
+    0% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 0
+    }
+    51% {
+        transform: translateX(-50%);
+        opacity: 0
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@media (max-width: 700px) {
+    .mes-texto {
+        font-size: 18px;
+    }
+
+    .mes-flechas {
+        font-size: 30px;
+        margin: 0 5%;
+    }
+}
+
+.mes-flechas {
+    font-size: 45px;
+    margin: 0 10%;
+    color: #888888;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mes-flechas:active {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto-navbar {
+    color: white !important;
+}
+
+.div-flecha {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+}
+
+.texto-flecha {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.flecha {
+    position: absolute;
+    height: 50px;
+    width: 65px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    animation: flecha-anim-pc 550ms ease 2s infinite alternate;
+}
+
+@media only screen and (max-width: 600px) {
+    .flecha {
+        animation: flecha-anim-movil 550ms ease 2s infinite alternate;
+
+    }
+}
+
+@keyframes flecha-anim-movil {
+    0% {
+        bottom: -60px;
+    }
+    100% {
+        bottom: -45px;
+    }
+}
+
+@keyframes flecha-anim-pc {
+    0% {
+        bottom: -51px;
+    }
+    100% {
+        bottom: -40px;
+    }
+}

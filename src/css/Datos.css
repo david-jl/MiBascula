@@ -1,0 +1,23 @@
+.dropdown-item:hover {
+    cursor: pointer;
+    background-color: #afafaf;
+}
+
+.btn-dropdown {
+    background-color: #e5e5e5;
+    color: #636363;
+}
+
+.inputNumber {
+    -moz-appearance: textfield;
+}
+
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.vacio {
+    border: 1px solid red;
+}

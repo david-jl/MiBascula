@@ -1,0 +1,77 @@
+
+.parent-ayuda {
+    padding-top: 40px;
+}
+
+.cuadro-ayuda {
+    background-color: #fafafa;
+    width: 80%;
+    min-height: 200px;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 10px;
+    font-size: 12px !important;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.boton-cuadro-ayuda {
+    position: static;
+    bottom: 0;
+    right: 0;
+    max-width: 250px;
+    text-align: center;
+}
+
+@keyframes expandir {
+    from {
+        min-height: 200px;
+    }
+    to {
+        min-height: 300px;
+    }
+}
+
+.expandir {
+    animation: expandir 600ms ease 1 forwards;
+}
+
+ol {
+    padding-left: 0;
+}
+
+@keyframes cerrar {
+    from {
+        min-height: 300px;
+    }
+    to {
+        min-height: 200px;
+    }
+}
+
+.cerrar {
+    animation: cerrar 600ms ease 1 forwards;
+}
+
+.cerrar-pasos {
+    display: none;
+}
+
+@keyframes expandir-pasos {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 200px;
+    }
+}
+
+.expandir-pasos {
+    display: list-item;
+    list-style-position: inside !important;
+    padding-top: 5px;
+    animation: expandir-pasos 2000ms ease 1 forwards;
+}
+
+.transparente {
+    opacity: 0;
+}

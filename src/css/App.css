@@ -1,0 +1,29 @@
+html, body {
+    height: 100vh;
+}
+
+body {
+    overscroll-behavior-y: none;
+}
+
+* {
+    text-decoration: none !important;
+    outline: none !important;
+    scroll-behavior: smooth;
+}
+
+
+.completo {
+    height: 80vh !important;
+}
+
+.footer-sesion {
+    color: grey;
+    position: absolute;
+    bottom: 2%;
+}
+
+html, body {
+    overflow: -moz-scrollbars-none !important;
+}
+

@@ -1,0 +1,66 @@
+.borrarTabla:hover {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+    color: rgba(255, 0, 0, 1);
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    right: 7%;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 17px;
+    background-color: #575757;
+    user-select: none;
+}
+
+.deshacer {
+    margin-left: 10px;
+    color: #FF9800;
+    cursor: pointer;
+}
+
+.popup {
+    animation: popup 3500ms ease-in-out 1 forwards;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+    15%, 85% {
+        top: 70px;
+    }
+    99% {
+        opacity: 1
+    }
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .texto-tabla {
+        font-size: 11px;
+    }
+
+    .texto-tabla-fecha {
+        font-size: 12px;
+    }
+}
+
+.borrarTabla {
+    color: rgba(255, 0, 0, 0.4);
+    margin: 0;
+    font-weight: bold;
+}
+
+.tabla {
+    border: 2px solid black !important;
+}
