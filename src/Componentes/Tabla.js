@@ -85,33 +85,6 @@ class Tabla extends Component {
         })
     }
 
-    /*if (snapshot.exists()) {
-        snapshot.forEach(anioSnapShot => {
-            if(anioSnapShot.exists()) {
-                anioSnapShot.forEach(mesSnapShot => {
-                    if(mesSnapShot.exists()) {
-                        mesSnapShot.forEach(child => {
-                            let dia = child.val().dia.substring(8, 10) + "/" + child.val().dia.substring(5, 7) + "/" + child.val().dia.substring(0, 4);
-                            datos.push({
-                                dia: dia,
-                                peso: child.val().peso,
-                                observacion: child.val().observacion,
-                                id: child.val().id,
-                            });
-                            items++;
-                            this.setState({
-                                datos: datos,
-                                items: items,
-                                popup: this.state.popup,
-                            });
-                        });
-                    }
-                });
-            }
-        })
-    }*/
-
-
     render() {
         return (
             <Fragment>

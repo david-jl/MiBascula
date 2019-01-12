@@ -5,12 +5,12 @@ import * as serviceWorker from './serviceWorker';
 import firebase from 'firebase'
 
 const config = {
-    apiKey: "********************",
+    apiKey: "AIzaSyDr6dO428jBtRCR-77Q_GSHf0Xdo68O0ng",
     authDomain: "mibascula-davidjl.firebaseapp.com",
     databaseURL: "https://mibascula-davidjl.firebaseio.com",
     projectId: "mibascula-davidjl",
     storageBucket: "",
-    messagingSenderId: "**********"
+    messagingSenderId: "386595950837"
 };
 
 firebase.initializeApp(config);

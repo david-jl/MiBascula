@@ -125,6 +125,10 @@ class Datos extends Component {
         } else {
             position = 'static';
         }
+        let hoy = new Date();
+        let mes = hoy.getMonth() + 1;
+        mes = mes < 10 ? "0" + mes : mes;
+        let fecha = hoy.getFullYear() + "-" + mes + "-" + hoy.getDate();
         return (
             <div className='container mt-5 mb-4' style={{position: position, bottom: posicion, marginBottom: 0}}>
                 <h2>Añadir dato</h2>
@@ -135,7 +139,9 @@ class Datos extends Component {
                         <div className="col-sm-4 mb-2 mb-md-0">
                             <input ref={dia => {
                                 this.inputDia = dia
-                            }} onChange={this.handleOnChangeDia} type="date"
+                            }}
+                                   value={fecha}
+                                   onChange={this.handleOnChangeDia} type="date"
                                    className={this.state.vacioDia ? "form-control form-control-sm vacio" : " form-control form-control-sm"}
                                    id="dia"
                                    placeholder="dd/mm/yyyy"/>
