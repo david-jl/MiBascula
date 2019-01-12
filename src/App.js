@@ -6,6 +6,8 @@ import Grafico from "./Componentes/Grafico";
 import Tabla from "./Componentes/Tabla";
 import Ayuda from "./Componentes/Ayuda";
 import Sesion from "./Componentes/Sesion";
+import MDSpinner from "react-md-spinner";
+
 
 import {createBrowserHistory} from 'history';
 import {Redirect, Route} from 'react-router';
@@ -95,6 +97,10 @@ class PrivateRoute extends React.Component {
                 this.setState({
                     user: user
                 });
+            } else {
+                this.setState({
+                    user: undefined
+                });
             }
         });
     }
@@ -104,6 +110,12 @@ class PrivateRoute extends React.Component {
         if (isLoggedIn) {
             return (
                 <Route path={this.props.path} component={this.props.component}/>
+            )
+        } else if (this.state.user === null) {
+            return (
+                <div className='d-flex justify-content-center mt-5 pt-5'>
+                    <MDSpinner singleColor='#FF9800' size={75} borderSize={6}/>
+                </div>
             )
         } else {
             return (
